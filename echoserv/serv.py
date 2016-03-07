@@ -4,11 +4,10 @@ import socket
 class EchoHandler(asyncore.dispatcher_with_send):
 
     def handle_read(self):
-        data = self.recv(8192)
+        data = self.recv(1024)
         if data:
             if data == 'close':
                 self.close()
-            print (data)
             self.send(data)
 
 class EchoServer(asyncore.dispatcher):
