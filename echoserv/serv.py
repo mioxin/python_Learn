@@ -21,8 +21,8 @@ class EchoServer(asyncore.dispatcher):
     def handler_accept(self):                                                       
         pair=self.accept()                                                            
         if pair is not None:                                                          
-        sock,addr=pair                                                              
-        handler=EchoHandler(sock)
+            sock,addr=pair                                                              
+            handler=EchoHandler(sock)
 
 server=EchoServer('0.0.0.0',2222)
 asyncore.loop() 
