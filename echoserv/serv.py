@@ -6,7 +6,8 @@ class EchoHandler(asyncore.dispatcher_with_send):
     data=self.recv(1024)                                                        
     if  data:                                                                   
       if data=='close' or data=='Close':                                        
-        self.close()                                                            
+        self.close()
+      print(data)
       self.send(data)                                                           
                                                                                 
 class EchoServer(asyncore.dispatcher):                                          
@@ -18,7 +19,7 @@ class EchoServer(asyncore.dispatcher):
     self.bind((host,port))                                                      
     self.listen(10)                                                              
                                                                                 
-    def handler_accept(self):                                                       
+  def handler_accept(self):                                                       
         pair=self.accept()                                                            
         if pair is not None:                                                          
             sock,addr=pair                                                              
