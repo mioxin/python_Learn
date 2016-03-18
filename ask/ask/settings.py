@@ -1,5 +1,5 @@
 """
-Django settings for mdjango project.
+Django settings for ask project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(BASE_DIR)
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0x90@gh=b%6zq1!nng_o+q(+em47zgsro+029(k8z#mk&5fgba'
+SECRET_KEY = '%xehw@ya2rbk19$59$cehw#gewtr2m(m#wh2nn8)ikocek3umz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,15 +41,15 @@ INSTALLED_APPS = (
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'mdjango.urls'
+ROOT_URLCONF = 'ask.ask.urls'
 
-WSGI_APPLICATION = 'mdjango.wsgi.application'
+WSGI_APPLICATION = 'ask.ask.wsgi.application'
 
 
 # Database
@@ -79,4 +79,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = BASE_DIR + '/static/'
+STATIC_URL = BASE_DIR + '/public'
